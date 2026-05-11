@@ -1,3 +1,5 @@
+[DEMO AO VIVO](https://aggregator-nextjs.vercel.app/)
+
 # Data Aggregator - Next.js SSR
 
 Painel operacional construído com Next.js, TypeScript e App Router para simular a agregação de múltiplas fontes de dados. O projeto renderiza um dashboard server-side, expõe o mesmo dataset por API route e documenta como essa arquitetura poderia evoluir para AWS.
