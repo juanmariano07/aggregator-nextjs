@@ -4,6 +4,16 @@
 
 Painel operacional construído com Next.js, TypeScript e App Router para simular a agregação de múltiplas fontes de dados. O projeto renderiza um dashboard server-side, expõe o mesmo dataset por API route e documenta como essa arquitetura poderia evoluir para AWS.
 
+## Preview
+
+### Dashboard SSR
+
+![Dashboard SSR do agregador](docs/screenshot-dashboard.png)
+
+### Responsividade
+
+![Versão mobile do dashboard](docs/screenshot-mobile.png)
+
 ## Objetivo
 
 Este projeto foi criado para demonstrar competências cobradas em vagas frontend/fullstack com Next.js:
