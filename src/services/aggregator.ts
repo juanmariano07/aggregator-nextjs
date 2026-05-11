@@ -41,7 +41,7 @@ export async function getAggregatedDataset(): Promise<AggregatedDataset> {
 
   return {
     generatedAt: new Date().toISOString(),
-    window: "Ultimas 24 horas",
+    window: "Últimas 24 horas",
     summary: {
       totalSources: sources.length,
       healthySources: sources.length - degradedSources,

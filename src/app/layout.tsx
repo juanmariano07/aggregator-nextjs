@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Data Aggregator | Next.js SSR",
   description:
-    "Painel SSR em Next.js para agregacao de fontes operacionais com arquitetura AWS.",
+    "Painel SSR em Next.js para agregação de fontes operacionais com arquitetura AWS.",
 };
 
 export default function RootLayout({

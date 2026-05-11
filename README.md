@@ -41,6 +41,10 @@ npm run start    # executa build local
 npm run lint     # análise estática
 ```
 
+## Auditoria
+
+O projeto usa `overrides` no `package.json` para fixar `postcss@8.5.10`, corrigindo uma vulnerabilidade transitiva herdada pelo Next.js sem recorrer a `npm audit fix --force`.
+
 ## Estrutura
 
 ```text
@@ -113,4 +117,3 @@ Em produção, `mock-sources.ts` seria substituído por adaptadores reais de API
 - Revalidação evita recalcular dados em toda requisição.
 - Separar serviço de agregação da UI facilita testar e reaproveitar regra.
 - AWS entraria como infraestrutura de coleta, processamento, storage e observabilidade.
-

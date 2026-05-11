@@ -4,16 +4,16 @@ import type { Severity, SourceStatus } from "@/types/aggregator";
 export const revalidate = 60;
 
 const statusLabel: Record<SourceStatus, string> = {
-  healthy: "Saudavel",
+  healthy: "Saudável",
   degraded: "Degradado",
-  down: "Indisponivel",
+  down: "Indisponível",
 };
 
 const severityLabel: Record<Severity, string> = {
   low: "Baixo",
-  medium: "Medio",
+  medium: "Médio",
   high: "Alto",
-  critical: "Critico",
+  critical: "Crítico",
 };
 
 function formatDateTime(value: string) {
@@ -43,10 +43,10 @@ export default async function Home() {
           <h1>Data Aggregator</h1>
           <p>
             Painel server-side que consolida fontes operacionais, prioriza
-            eventos e expoe o mesmo dataset por API.
+            eventos e expõe o mesmo dataset por API.
           </p>
         </div>
-        <div className="refresh-card" aria-label="Dados da renderizacao">
+        <div className="refresh-card" aria-label="Dados da renderização">
           <span>Snapshot SSR</span>
           <strong>{formatDateTime(dataset.generatedAt)}</strong>
           <small>Revalida a cada 60s</small>
@@ -58,8 +58,8 @@ export default async function Home() {
           <span>Fontes ativas</span>
           <strong>{dataset.summary.totalSources}</strong>
           <small>
-            {dataset.summary.healthySources} saudaveis /{" "}
-            {dataset.summary.degradedSources} com atencao
+            {dataset.summary.healthySources} saudáveis /{" "}
+            {dataset.summary.degradedSources} com atenção
           </small>
         </article>
         <article className="summary-card">
@@ -68,18 +68,18 @@ export default async function Home() {
           <small>{dataset.window}</small>
         </article>
         <article className="summary-card">
-          <span>Latencia media</span>
+          <span>Latência média</span>
           <strong>{dataset.summary.avgLatencyMs} ms</strong>
           <small>Calculada no servidor</small>
         </article>
         <article className="summary-card summary-card--alert">
-          <span>Eventos criticos</span>
+          <span>Eventos críticos</span>
           <strong>{dataset.summary.criticalEvents}</strong>
-          <small>Prioridade de operacao</small>
+          <small>Prioridade de operação</small>
         </article>
       </section>
 
-      <section className="metric-grid" aria-label="Metricas de negocio">
+      <section className="metric-grid" aria-label="Métricas de negócio">
         {dataset.metrics.map((metric) => (
           <article className="metric-card" key={metric.label}>
             <span>{metric.label}</span>
@@ -97,7 +97,7 @@ export default async function Home() {
           <div className="panel-header">
             <div>
               <span className="eyebrow">Conectores</span>
-              <h2>Saude das fontes agregadas</h2>
+              <h2>Saúde das fontes agregadas</h2>
             </div>
             <code>SSR fetch: getAggregatedDataset()</code>
           </div>
